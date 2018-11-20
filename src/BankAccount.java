@@ -1,69 +1,121 @@
-public class BankAccount {
+public class BankAccount<accountHolder> {
+
+	
+
 	private static long generatedAccountNumber = 100000001L;
+
 	
-	private int balance;
-	private int accountNumber;
+
+	private long accountNumber;
+
+	private double balance;
+
 	private accountHolder accountHolder;
+
+
 	
-	
-	public BankAccount(int balance, int accountNumber, int pin, accountHolder accountHolder)
-	{
+
+	public BankAccount(double balance, accountHolder accountHolder) {
+
+		this.accountNumber = BankAccount.generatedAccountNumber++;
+
 		this.balance = balance;
-		this.accountNumber = accountNumber;
+
 		this.accountHolder = accountHolder;
+
 	}
 
-	public int getAccountNumber() {
+	
+
+
+	public long getAccountNumber() {
+
 		return accountNumber;
+
 	}
+
 	
-	
-	public accountHolder getAccountHolder()
-	{
-		return accountHolder;
-	}
-	
-	public int getBalance()
-	{
+
+
+	public double getBalance() {
+
 		return balance;
+
 	}
-	
-	public void setBalance (int balance)
-	{
-		this.balance = balance;
+
+
+	public accountHolder getAccountHolder() {
+
+		return accountHolder;
+
 	}
+
 	
-	public void setaccountHolder (accountHolder accountHolder)
-	{
-		this.accountHolder = accountHolder;
-	}
-	
-	public void setaccountNumber(int accountNumber)
-	{
+
+
+	public void setAccountNumber(long accountNumber) {
+
 		this.accountNumber = accountNumber;
+
 	}
+
+
+	public void setBalance(double balance) {
+
+		this.balance = balance;
+
+	}
+
 	
-	public int deposit(int amount) {
+
+	public void setaccountHolder(accountHolder accountHolder) {
+
+		this.accountHolder = accountHolder;
+
+	}
+
+	
+
+
+	public int deposit(double amount) {
+
 		if (amount <= 0) {
+
 			return 0;
+
 		} else {
+
 			balance = balance + amount;
+
 			
+
 			return 1;
+
 		}
+
 	}
+
 	
-	
-	public int withdraw(int amount) {
+
+	public int withdraw(double amount) {
+
 		if (amount > balance) {
+
 			return 0;
+
 		} else if (amount <= 0) {
+
 			return 1;
+
 		} else {
+
 			balance = balance - amount;
-			
+
 			return 2;
+
 		}
+
 	}
+
 }
-	
+

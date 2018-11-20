@@ -1,56 +1,91 @@
-import java.util.Scanner;
-public class accountHolder 
-{
+public class accountHolder {
+
+	
+
 	private int pin;
-	private int ssn;
+
 	private String name;
-	private int phoneNumber;
-	
-	public accountHolder (int pin, int ssn, String name, int phoneNumber)
-	{
-		this.phoneNumber = phoneNumber;
-		this.name = name;
-		this.ssn = ssn;
-	}
 
-	public int getpin()
-	{
-		return pin;
-	}
-	
-	public int getSSN () {
-		return ssn;
-	}
-	
-	public String getname()
-	{
-		return name;
-	}
+	private String dob;
 
-	public int getphoneNumber()
-	{
-		return phoneNumber;
-		
-	}
+	private String address;
 
-	public void setPin (int pin)
-	{
+
+
+	public accountHolder(int pin, String name, String dob, String address) {
+
 		this.pin = pin;
-	}
-	
-	public void setSSN(int ssn)
-	{
-		this.ssn = ssn;
-	}
-	
-	public void setphoneNumber (int phoneNumber)
-	{
-		 this.phoneNumber = phoneNumber;
+
+		this.name = name;
+
+		this.dob = dob;
+
+		this.address = address;
+
 	}
 
-	public void setName (String name)
-	{
-		 this.name = name;
+	
+
+	public int getPIN() {
+
+		return pin;
+
+	}
+
+
+	public String getName() {
+
+		return name;
+
+	}
+
+	
+
+	public String getDOB() {
+
+		return dob;
+
+	}
+
+
+	public String getAddress() {
+
+		return address;
+
+	}
+
+	
+	public void setPIN(int pin) {
+
+		this.pin = pin;
+
+	}
+
+	
+
+	public void setName(String name) {
+
+		this.name = name;
+
+	}
+
+	
+
+
+	public void setDOB(String dob) {
+
+		this.dob = dob;
+
+	}
+
+	
+
+
+	public void setAddress(String address) {
+
+		this.address = address;
+
 	}
 
 }
+
