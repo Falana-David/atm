@@ -14,16 +14,23 @@ public class ATM {
 	public static void main(String[] args) {
 		ATM atm = new ATM(new BankAccount(0, 0, 0, new accountHolder(1234, 156069898, "David Falana", 07)));
 	
+		System.out.println("Name");
+		Scanner in1111 = new Scanner(System.in);
+		String name = in1111.nextLine();
+		
 		System.out.println("Account #");
 		Scanner in1 = new Scanner(System.in);
 		int num1 = in1.nextInt();
+		
 		System.out.println("Pin #");
 		Scanner in2 = new Scanner(System.in);
 		int num2 = in2.nextInt();
+		
+		
 		if ( num1 == 100000001 && num2 == 1234)
 			{
-			System.out.println("Welcome" + name);
-			System.out.println(" (1) View Balance\n (2) Deposit\n (3) Withdraw\n (4) Exit");
+			System.out.println("Welcome " + name);
+			System.out.println(" (1) View Balance\n (2) Deposit\n (3) Withdraw\n (4) Exit\n ");
 		}
 		Scanner in3 = new Scanner(System.in);
 		int num3 = in3.nextInt();
